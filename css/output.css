@@ -583,6 +583,11 @@ video {
   margin-right: 4rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-20 {
   margin-left: 5rem;
   margin-right: 5rem;
@@ -642,6 +647,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -660,6 +669,10 @@ video {
 
 .h-2 {
   height: 0.5rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .h-full {
@@ -688,6 +701,10 @@ video {
 
 .w-32 {
   width: 8rem;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .w-\[80px\] {
@@ -775,10 +792,6 @@ video {
   border-radius: 0.75rem;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .border {
   border-width: 1px;
 }
@@ -796,11 +809,6 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.border-red-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
 }
 
 .bg-black\/20 {
@@ -837,6 +845,10 @@ video {
 
 .bg-\[20\%\] {
   background-position: 20%;
+}
+
+.fill-white {
+  fill: #fff;
 }
 
 .px-10 {
@@ -949,14 +961,14 @@ video {
   color: rgb(249 115 22 / var(--tw-text-opacity, 1));
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .shadow-2xl {
@@ -971,43 +983,33 @@ video {
   transition-duration: 150ms;
 }
 
-html{
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 30px;
 }
 
-.dinarone{
+.dinarone {
   font-family: "DinarOne";
   font-weight: normal;
   font-style: normal;
 }
 
-.clave{
+.clave {
   font-family: "clave";
   font-weight: normal;
   font-style: normal;
 }
 
-.arial{
+.arial {
   font-family: "Arial";
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family:'DinarOne';
+  font-family: "DinarOne";
 
-  src: url("./../fonts/GE-Dinar-One-Medium.otf") format('opentype');
-
-  font-weight: normal;
-
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Arial';
-
-  src: url('./../fonts/Arial-Unicode-MS.ttf') format('truetype');
+  src: url("./../fonts/GE-Dinar-One-Medium.otf") format("opentype");
 
   font-weight: normal;
 
@@ -1015,29 +1017,39 @@ html{
 }
 
 @font-face {
-  font-family: 'clave';
+  font-family: "Arial";
 
-  src: url('./../fonts/MiniclaveDEMO.ttf') format('truetype');
+  src: url("./../fonts/Arial-Unicode-MS.ttf") format("truetype");
 
   font-weight: normal;
 
   font-style: normal;
 }
 
-.hero{
-  background-image: url("./../new/BBB.jpg") ;
+@font-face {
+  font-family: "clave";
+
+  src: url("./../fonts/MiniclaveDEMO.ttf") format("truetype");
+
+  font-weight: normal;
+
+  font-style: normal;
 }
 
-.bg-main{
-  background-image: url("./../new/BG.jpg") ;
+.hero {
+  background-image: url("./../new/BBB.jpg");
 }
 
-.bg-image{
-  background-position: center center ;
-  background-size :cover ;
+.bg-main {
+  background-image: url("./../new/BG.jpg");
 }
 
-.my-list{
+.bg-image {
+  background-position: center center;
+  background-size: cover;
+}
+
+.my-list {
   list-style-image: url("./../new/icons/test.png");
   list-style-position: outside;
 }
@@ -1300,3 +1312,5 @@ html{
     background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   }
 }
+
+
