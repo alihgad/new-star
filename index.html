@@ -459,23 +459,28 @@
 
 
         <!-- Form -->
-        <div class="md:px-30 lg:px-72 px-10 mt-20" dir="rtl">
-          <h2 class="text-5xl text-white font-bold text-center">تحتاج لمساعدة ؟</h2>
-          <h2 class="text-3xl text-orange-500 font-bold text-center mt-3">لا تتردد فى التواصل معنا</h2>
 
-          <form class="mt-5 flex flex-col gap-y-5 ">
+        <div class="md:px-30 lg:px-72 px-10 mt-20" dir="rtl">
+
+          <h2 class="text-5xl text-white font-bold text-center">تحتاج لمساعدة ؟</h2>
+
+          <h2 class="text-3xl text-orange-500 font-bold text-center mt-3">لا تتردد فى التواصل معنا</h2>
+          
+          <p id="error" class="text-red-500 text-center hidden mt-5 text-2xl  ">برجاء ملئ جميع الحقول </p>
+
+          <form class="mt-5 flex flex-col gap-y-5 message-form " action="POST">
             <label for="name" class="text-white text-xl">الأسم</label>
-            <input class="bg-blue-950 py-2 border-white border "  type="text" id="name" name="name" required>
+            <input class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl "  type="text" id="name" name="name" >
             <label for="phone" class="text-white text-xl">الجوال</label>
-            <input  class="bg-blue-950 py-2 border-white border " type="tel" id="phone" name="phone" required>
+            <input  class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl  " dir="rtl" type="tel" id="phone" name="phone" >
             <label for="email" class="text-white text-xl">البريد الالكترونى</label>
-            <input  class="bg-blue-950 py-2 border-white border " type="email" id="email" name="email" required>
+            <input  class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl " type="email" id="email" name="email" >
             <label for="message" class="text-white text-xl">الموضوع</label>
-            <textarea class="bg-blue-950 py-2 border-white border "  id="message" name="message" required></textarea>
+            <textarea class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl "  id="message" name="message" ></textarea>
             <button type="submit" class="text-white bg-orange-500 border px-5 py-2 mt-5 w-1/4 mx-auto hover:bg-white hover:text-black transition-all">ارسل </button>
           </form>
+
         </div>
-        
 
         <!-- Form end-->
       </div>
