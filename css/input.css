@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+.dinarone {
+  font-family: "DinarOne";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clave {
+  font-family: "clave";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.arial {
+  font-family: "Arial";
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DinarOne";
+  src: url("./../fonts/GE-Dinar-One-Medium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("./../fonts/Arial-Unicode-MS.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "clave";
+  src: url("./../fonts/MiniclaveDEMO.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hero {
+  background-image: url("./../new/BBB.jpg");
+}
+
+.bg-main {
+  background-image: url("./../new/BG.jpg");
+}
+
+.bg-image {
+  background-position: center center;
+  background-size: cover;
+}
+
+.my-list {
+  list-style-image: url("./../new/icons/test.png");
+  list-style-position: outside;
+}
+
+

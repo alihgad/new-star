@@ -13,8 +13,50 @@
       rel="stylesheet"
     />
   </head>
-  <body class="font-roboto dinarone ">
-    <main>
+  <body class="font-roboto dinarone ">  
+    <!-- nav -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/20 shadow-lg">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3">
+            <img src="https://placehold.co/60x60" alt="Logo" class="w-10 h-10 md:w-12 md:h-12 rounded-full">
+            <span class="text-white text-lg md:text-xl font-bold mr-3 dinarone">Star Tech</span>
+          </div>
+          
+          <!-- Contact Icons -->
+          <div class="flex items-center space-x-4 md:space-x-6 space-x-reverse">
+            <!-- Phone -->
+            <a href="tel:+966501234567" class="group flex items-center space-x-2 space-x-reverse text-white hover:text-orange-500 transition-all duration-300" title="اتصل بنا">
+              <div class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-sky-500/20 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-all duration-300">
+
+                <!-- <i class="fa-solid fa-phone-flip text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i> -->
+              </div>
+              <span class="text-xs md:text-sm dinarone hidden lg:block">+966 50 123 4567</span>
+            </a>
+            
+            <!-- WhatsApp -->
+            <a href="https://wa.me/966501234567" target="_blank" class="group flex items-center space-x-2 space-x-reverse text-white hover:text-green-500 transition-all duration-300" title="واتساب">
+              <div class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-green-500/20 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-all duration-300">
+                <i class="fab fa-whatsapp text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
+              </div>
+              <span class="text-xs md:text-sm dinarone hidden lg:block">واتساب</span>
+            </a>
+            
+            <!-- Email -->
+            <a href="mailto:info@newstar.com" class="group flex items-center space-x-2 space-x-reverse text-white hover:text-orange-500 transition-all duration-300" title="راسلنا">
+              <div class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all duration-300">
+                <i class="fas fa-envelope text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
+              </div>
+              <span class="text-xs md:text-sm dinarone hidden lg:block">info@newstar.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <main >
       <!-- hero section -->
       <div class="hero sm:bg-center bg-cover bg-[20%] h-screen">
         <div
@@ -39,7 +81,7 @@
       <!-- hero section End -->
 
       <!-- holder -->
-      <div class="bg-main bg-cover pt-5 pb-10 ">
+      <div class="bg-main bg-cover pt-5  ">
         <!--packges-->
         <div class="flex justify-center items-center flex-col pt-10">
           <h2 class="text-5xl text-white pb-5 font-bold">منصة ادارة المعاهد</h2>
@@ -483,9 +525,21 @@
         </div>
 
         <!-- Form end-->
+        <footer class="bg-black/80 backdrop-blur-sm border-t border-white/20 py-6 mt-20">
+          <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center">
+              <p class="text-white text-lg md:text-xl font-bold font-roboto " >
+                Star Tech © 2025
+              </p>
+            </div>
+          </div>
+        </footer>
       </div>
+      
       <!-- holder End -->
     </main>
+
+    
 
     <script src="js/index.js"></script>
     <script src="js/all.min.js"></script>
