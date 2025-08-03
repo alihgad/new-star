@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="css/all.min.css" rel="stylesheet" />
+    <!-- <link href="css/all.min.css" rel="stylesheet" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link href="css/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,43 +19,80 @@
       href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=El+Messiri:wght@400..700&family=Playwrite+TZ+Guides&display=swap"
       rel="stylesheet"
     />
+
   </head>
-  <body class="font-roboto dinarone ">  
+  <body class="font-roboto dinarone">
     <!-- nav -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/20 shadow-lg">
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/20 shadow-lg"
+    >
       <div class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center">
           <!-- Logo -->
           <div class="flex items-center space-x-3">
-            <img src="https://placehold.co/60x60" alt="Logo" class="w-10 h-10 md:w-12 md:h-12 rounded-full">
-            <span class="text-white text-lg md:text-xl font-bold mr-3 dinarone">Star Tech</span>
+            <img
+              src="https://placehold.co/60x60"
+              alt="Logo"
+              class="w-10 h-10 md:w-12 md:h-12 rounded-full"
+            />
+            <span class="text-white text-lg md:text-xl font-bold mr-3 dinarone"
+              >Star Tech</span
+            >
           </div>
-          
+
           <!-- Contact Icons -->
           <div class="flex items-center space-x-4 md:space-x-6 space-x-reverse">
             <!-- Phone -->
-            <a href="tel:+966501234567" class="group flex items-center space-x-2 space-x-reverse text-white hover:text-orange-500 transition-all duration-300" title="اتصل بنا">
-              <div class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-sky-500/20 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-all duration-300">
+            <a
+              href="tel:+966501234567"
+              class="group flex items-center space-x-2 space-x-reverse text-white hover:text-orange-500 transition-all duration-300"
+              title="اتصل بنا"
+            >
+              <div
+                class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-sky-500/20 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-all duration-300"
+              >
+                <i class="fa-solid fa-phone text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
+              </div>
+              <span class="text-xs md:text-sm dinarone hidden lg:block"
+                >+966 50 123 4567</span
+              >
+            </a>
 
-                <!-- <i class="fa-solid fa-phone-flip text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i> -->
-              </div>
-              <span class="text-xs md:text-sm dinarone hidden lg:block">+966 50 123 4567</span>
-            </a>
-            
             <!-- WhatsApp -->
-            <a href="https://wa.me/966501234567" target="_blank" class="group flex items-center space-x-2 space-x-reverse text-white hover:text-green-500 transition-all duration-300" title="واتساب">
-              <div class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-green-500/20 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-all duration-300">
-                <i class="fab fa-whatsapp text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            <a
+              href="https://wa.me/966501234567"
+              target="_blank"
+              class="group flex items-center space-x-2 space-x-reverse text-white hover:text-green-500 transition-all duration-300"
+              title="واتساب"
+            >
+              <div
+                class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-green-500/20 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-all duration-300"
+              >
+                <i
+                  class="fab fa-whatsapp text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"
+                ></i>
               </div>
-              <span class="text-xs md:text-sm dinarone hidden lg:block">واتساب</span>
+              <span class="text-xs md:text-sm dinarone hidden lg:block"
+                >واتساب</span
+              >
             </a>
-            
+
             <!-- Email -->
-            <a href="mailto:info@newstar.com" class="group flex items-center space-x-2 space-x-reverse text-white hover:text-orange-500 transition-all duration-300" title="راسلنا">
-              <div class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all duration-300">
-                <i class="fas fa-envelope text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            <a
+              href="mailto:info@newstar.com"
+              class="group flex items-center space-x-2 space-x-reverse text-white hover:text-orange-500 transition-all duration-300"
+              title="راسلنا"
+            >
+              <div
+                class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-orange-500/20 rounded-full flex items-center justify-center group-hover:bg-orange-500 transition-all duration-300"
+              >
+                <i
+                  class="fas fa-envelope text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"
+                ></i>
               </div>
-              <span class="text-xs md:text-sm dinarone hidden lg:block">info@newstar.com</span>
+              <span class="text-xs md:text-sm dinarone hidden lg:block"
+                >info@newstar.com</span
+              >
             </a>
           </div>
         </div>
@@ -56,17 +100,17 @@
     </nav>
     <!-- nav end -->
 
-    <main >
+    <main>
       <!-- hero section -->
       <div class="hero sm:bg-center bg-cover bg-[20%] h-screen">
         <div
           class="flex justify-center md:items-end items-center flex-col h-full md:w-3/4"
         >
-          <p class="text-white text-4xl  font-bold">
+          <p class="text-white text-4xl font-bold">
             اختيارك الاول فى عالم التطبيقات
           </p>
           <p
-            class="text-white text-4xl clave  font-bold tracking-[0.2em] uppercase mt-14"
+            class="text-white text-4xl clave font-bold tracking-[0.2em] uppercase mt-14"
           >
             Tech starts with us
           </p>
@@ -81,96 +125,103 @@
       <!-- hero section End -->
 
       <!-- holder -->
-      <div class="bg-main bg-cover pt-5  ">
+      <div class="bg-main bg-cover pt-5">
         <!--packges-->
-        <div class="flex justify-center items-center flex-col pt-10">
-          <h2 class="text-5xl text-white pb-5 font-bold">منصة ادارة المعاهد</h2>
-          <p class="text-white text-xl px-5 lg:w-5/12 xl:w-4/12 text-center">
-            منصة الكترونية شاملة لإدارة مراكز التدريب , معاهد , معاهد عليا تشمل
-            كل متطلبات المعاهد الإدارية واللوجيستية
-          </p>
-          <div class="space-x-5 mt-5">
-            <button
-              class="text-white bg-blue-500 border px-5 py-2 mt-5 rounded-full hover:bg-white hover:text-black transition-all"
-            >
-              النسخة التجريبية
-            </button>
-            <button
-              class="text-white bg-blue-500 border px-5 py-2 mt-5 rounded-full hover:bg-white hover:text-black transition-all"
-            >
-              اطلب عرض السعر
-            </button>
-          </div>
+        <div class="flex justify-center items-center flex-col pt-10 2xl:px-40">
           <div
-            class="flex flex-col md:flex-row justify-center gap-x-16 gap-y-10 mt-10 w-full lg:w-8/12 px-10 lg:px-0"
-            dir="rtl"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center"
           >
             <div
-              class="md:w-1/2 mx-20 md:mx-0 px-6 py-5 bg-black/50 shadow-2xl hover:bg-blue-950/50 transition-all"
+              class="flex justify-around items-center flex-col pt-10 border border-blue-500 rounded-lg p-6 w-full max-w-sm"
             >
-              <div class="flex items-center justify-start">
-                <p class="text-3xl font-bold text-white">الباقة الأساسية</p>
-                <img src="./new/icons/9.png" alt="icon" class="w-10" />
+              <h2
+                class="text-3xl lg:text-[40px] text-white pb-5 font-bold text-center"
+              >
+                منصة ادارة المعاهد
+              </h2>
+              <p
+                class="text-lg lg:text-lg text-center text-white"
+              >
+                منصة الكترونية شاملة لإدارة مراكز التدريب , معاهد , معاهد عليا
+                تشمل كل متطلبات المعاهد الإدارية واللوجيستية
+              </p>
+              <div
+                class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-5 mt-5"
+              >
+                <button
+                  class="text-white bg-blue-500 border px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all"
+                >
+                  النسخة التجريبية
+                </button>
+                <button
+                  class="text-white bg-blue-500 border px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all"
+                >
+                  اطلب عرض السعر
+                </button>
               </div>
-              <hr
-                class="bg-orange-500 border border-orange-500 h-1 rounded-xl"
-              />
-              <ul class="mt-5 my-list text-lg">
-                <li class="text-white">
-                  إدارة الدورات التطويرية، الدورات التأهيلية، الدبلومات.
-                </li>
-                <li class="text-white">إدارة المدربين والمواد التدريبية.</li>
-                <li class="text-white">
-                  إمكانية التسجيل الإلكتروني للمتدربين.
-                </li>
-                <li class="text-white">
-                  أنواع متعددة من المستخدمين للنظام لسهولة العملية الإدارية
-                  (استقبال - محاسب - مدير تدريب - مدرب).
-                </li>
-                <li class="text-white">
-                  لكل متدرب صفحة مستقلة مؤمنة تتابع عن قرب الدورات، والحضور،
-                  والدرجات، وتمكنه من السداد الإلكتروني.
-                </li>
-                <li class="text-white">
-                  الاستضافة مجانًا على خوادمنا وتشمل الأمن والحماية.
-                </li>
-                <li class="text-white">عدد لا محدود من المتدربين.</li>
-                <li class="text-white">
-                  إمكانية الربط مع الرسائل النصية القصيرة SMS.
-                </li>
-              </ul>
             </div>
 
             <div
-              class="md:w-1/2 mx-20 md:mx-0 px-6 py-5 bg-black/50 shadow-2xl hover:bg-blue-950/50 transition-all"
+              class="flex justify-around items-center flex-col pt-10 border border-blue-500 rounded-lg p-6 w-full max-w-sm"
             >
-              <div class="flex items-center justify-start">
-                <p class="text-3xl font-bold text-white">الباقة الماسية</p>
-                <img src="./new/icons/d.png" alt="icon" class="w-10" />
+              <h2
+                class="text-3xl lg:text-[40px] text-white pb-5 font-bold text-center"
+              >
+                منصة ادارة المعاهد
+              </h2>
+              <p
+                class="text-lg lg:text-lg text-center text-white"
+              >
+                منصة الكترونية شاملة لإدارة مراكز التدريب , معاهد , معاهد عليا
+                تشمل كل متطلبات المعاهد الإدارية واللوجيستية
+              </p>
+              <div
+                class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-5 mt-5"
+              >
+                <button
+                  class="text-white bg-blue-500 border px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all"
+                >
+                  النسخة التجريبية
+                </button>
+                <button
+                  class="text-white bg-blue-500 border px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all"
+                >
+                  اطلب عرض السعر
+                </button>
               </div>
-              <hr
-                class="bg-orange-500 border border-orange-500 h-1 rounded-xl"
-              />
-              <ul class="mt-5 my-list text-lg">
-                <li class="text-white">
-                  حساب سوبر أدمن يشمل مؤشرات بيانية لكل الحركات التدريبية
-                  والمالية داخل المعهد.
-                </li>
-                <li class="text-white">نظام الاختبارات الإلكتروني.</li>
-                <li class="text-white">نظام التقييم والاستبيان الإلكتروني.</li>
-                <li class="text-white">
-                  طباعة تقرير مفصل لكل دورة يشمل الجانب التدريبي والمالي.
-                </li>
-                <li class="text-white">طباعة الشهادات إلكترونيًا من النظام.</li>
-                <li class="text-white">
-                  إمكانية الربط مع قنوات الدفع الإلكتروني.
-                </li>
-                <li class="text-white">إمكانية الربط مع نظام النفاذ الوطني.</li>
-              </ul>
+            </div>
+
+            <div
+              class="flex justify-around items-center flex-col pt-10 border border-blue-500 rounded-lg p-6 w-full max-w-sm md:col-span-2 lg:col-span-1"
+            >
+              <h2
+                class="text-3xl lg:text-[40px] text-white pb-5 font-bold text-center"
+              >
+                منصة ادارة المعاهد
+              </h2>
+              <p
+                class="text-lg lg:text-lg text-center text-white"
+              >
+                منصة الكترونية شاملة لإدارة مراكز التدريب , معاهد , معاهد عليا
+                تشمل كل متطلبات المعاهد الإدارية واللوجيستية
+              </p>
+              <div
+                class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-5 mt-5"
+              >
+                <button
+                  class="text-white bg-blue-500 border px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all"
+                >
+                  النسخة التجريبية
+                </button>
+                <button
+                  class="text-white bg-blue-500 border px-5 py-2 rounded-full hover:bg-white hover:text-black transition-all"
+                >
+                  اطلب عرض السعر
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <!--packges end-->
 
         <!-- services -->
         <div class="xl:px-72 lg:px-52 px-10 mt-10" dir="rtl">
@@ -279,7 +330,7 @@
             class="md:flex gap-4 mt-10 justify-center items-center flex-wrap xl:flex-nowrap"
           >
             <div
-              class="xl:w-[38%]  md:w-5/12 relative flex flex-col justify-center items-center mb-10 md:after:bg-white after:h-full after:-left-3 after:absolute after:w-[1px]"
+              class="xl:w-[38%] md:w-5/12 relative flex flex-col justify-center items-center mb-10 md:after:bg-white after:h-full after:-left-3 after:absolute after:w-[1px]"
             >
               <img
                 src="./new/icons/m.png"
@@ -292,7 +343,7 @@
             </div>
 
             <div
-              class="xl:w-1/4  md:w-5/12 relative flex flex-col justify-center items-center mb-10 xl:after:bg-white after:h-full after:-left-3 after:absolute after:w-[1px]"
+              class="xl:w-1/4 md:w-5/12 relative flex flex-col justify-center items-center mb-10 xl:after:bg-white after:h-full after:-left-3 after:absolute after:w-[1px]"
             >
               <img
                 src="./new/icons/6.png"
@@ -359,16 +410,13 @@
                 Foody Gurd
               </p>
             </div>
-
-            
-
           </div>
         </div>
         <!-- projects end -->
 
         <!-- Why us -->
         <div
-          class="px-18 md:px-30 xl:px-72 lg:px-48  mt-32 pb-10 pt-1 bg-black/20 relative"
+          class="px-18 md:px-30 xl:px-72 lg:px-48 mt-32 pb-10 pt-1 bg-black/20 relative"
           dir="rtl"
         >
           <div
@@ -392,8 +440,8 @@
               <p
                 class="bg-sky-500 text-white md:px-5 py-2 rounded-full text-2xl text-center"
               >
-              24/7 دعم فنى
-            </p>
+                24/7 دعم فنى
+              </p>
               <p class="text-white text-center mt-2">
                 نتواجد على مدار الساعة لخدمتكم
               </p>
@@ -445,7 +493,9 @@
             </div>
           </div>
 
-          <div class="grid md:grid-cols-2 xl:grid-cols-3 mt-10 gap-x-10 gap-y-14 px-14 lg:mx-0 lg:col-span-4">
+          <div
+            class="grid md:grid-cols-2 xl:grid-cols-3 mt-10 gap-x-10 gap-y-14 px-14 lg:mx-0 lg:col-span-4"
+          >
             <div class="flex flex-col mx-24 md:mx-0">
               <img
                 src="./new/icons/r1.png"
@@ -494,52 +544,82 @@
               </p>
             </div>
           </div>
-
         </div>
 
         <!-- Why us end -->
 
-
         <!-- Form -->
 
         <div class="md:px-30 lg:px-72 px-10 mt-20" dir="rtl">
+          <h2 class="text-5xl text-white font-bold text-center">
+            تحتاج لمساعدة ؟
+          </h2>
 
-          <h2 class="text-5xl text-white font-bold text-center">تحتاج لمساعدة ؟</h2>
+          <h2 class="text-3xl text-orange-500 font-bold text-center mt-3">
+            لا تتردد فى التواصل معنا
+          </h2>
 
-          <h2 class="text-3xl text-orange-500 font-bold text-center mt-3">لا تتردد فى التواصل معنا </h2>
-          
-          <p id="error" class="text-red-500 text-center hidden mt-5 text-2xl  ">برجاء ملئ جميع الحقول  </p>
+          <p id="error" class="text-red-500 text-center hidden mt-5 text-2xl">
+            برجاء ملئ جميع الحقول
+          </p>
 
-          <form class="mt-5 flex flex-col gap-y-5 message-form " action="POST">
+          <form class="mt-5 flex flex-col gap-y-5 message-form" action="POST">
             <label for="name" class="text-white text-xl">الأسم</label>
-            <input class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl "  type="text" id="name" name="name" >
+            <input
+              class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl"
+              type="text"
+              id="name"
+              name="name"
+            />
             <label for="phone" class="text-white text-xl">الجوال</label>
-            <input  class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl  " dir="rtl" type="tel" id="phone" name="phone" >
-            <label for="email" class="text-white text-xl">البريد الالكترونى</label>
-            <input  class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl " type="email" id="email" name="email" >
+            <input
+              class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl"
+              dir="rtl"
+              type="tel"
+              id="phone"
+              name="phone"
+            />
+            <label for="email" class="text-white text-xl"
+              >البريد الالكترونى</label
+            >
+            <input
+              class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl"
+              type="email"
+              id="email"
+              name="email"
+            />
             <label for="message" class="text-white text-xl">الموضوع</label>
-            <textarea class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl "  id="message" name="message" ></textarea>
-            <button id="form-button" type="submit" class="text-white bg-orange-500 border px-5 py-2 mt-5 w-1/4 mx-auto hover:bg-white hover:text-black transition-all">أرسل </button>
+            <textarea
+              class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl"
+              id="message"
+              name="message"
+            ></textarea>
+            <button
+              id="form-button"
+              type="submit"
+              class="text-white bg-orange-500 border px-5 py-2 mt-5 w-1/4 mx-auto hover:bg-white hover:text-black transition-all"
+            >
+              أرسل
+            </button>
           </form>
-
         </div>
 
         <!-- Form end-->
-        <footer class="bg-black/80 backdrop-blur-sm border-t border-white/20 py-6 mt-20">
+        <footer
+          class="bg-black/80 backdrop-blur-sm border-t border-white/20 py-6 mt-20"
+        >
           <div class="container mx-auto px-4">
             <div class="flex justify-center items-center">
-              <p class="text-white text-lg md:text-xl font-bold font-roboto " >
+              <p class="text-white text-lg md:text-xl font-bold font-roboto">
                 Star Tech © 2025
               </p>
             </div>
           </div>
         </footer>
       </div>
-      
+
       <!-- holder End -->
     </main>
-
-    
 
     <script src="js/index.js"></script>
     <script src="js/all.min.js"></script>
