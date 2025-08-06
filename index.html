@@ -1,283 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- <link href="css/all.min.css" rel="stylesheet" /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
-    <link href="css/output.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=El+Messiri:wght@400..700&family=Playwrite+TZ+Guides&display=swap"
-      rel="stylesheet"
-    />
-    
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>
-             .swiper-button-next,
-       .swiper-button-prev {
-         background-color: rgba(59, 130, 246, 0.9) !important;
-         backdrop-filter: blur(10px);
-         border-radius: 50%;
-         width: 50px;
-         height: 50px;
-         border: 2px solid rgba(255, 255, 255, 0.8) !important;
-         color: white !important;
-         z-index: 1000;
-         position: absolute !important;
-         top: 50% !important;
-         transform: translateY(-50%) !important;
-         display: flex !important;
-         align-items: center;
-         justify-content: center;
-       }
-       
-       .swiper-button-next {
-         right: 10px !important;
-       }
-       
-       .swiper-button-prev {
-         left: 10px !important;
-       }
-       
-       .swiper-button-next:hover,
-       .swiper-button-prev:hover {
-         background-color: rgba(59, 130, 246, 1) !important;
-         border-color: white !important;
-       }
-      
-             .swiper-button-next::after,
-       .swiper-button-prev::after {
-         color: white !important;
-         font-size: 20px !important;
-         font-weight: bold !important;
-         content: "" !important;
-       }
-       
-       .swiper-button-next::after {
-         content: "›" !important;
-       }
-       
-       .swiper-button-prev::after {
-         content: "‹" !important;
-       }
-      
-      .swiper-pagination {
-        position: relative;
-        z-index: 1000;
-        margin-top: 20px;
-      }
-      
-      .swiper-pagination-bullet {
-        background-color: rgba(255, 255, 255, 0.8) !important;
-        opacity: 1 !important;
-        width: 12px !important;
-        height: 12px !important;
-        margin: 0 5px !important;
-      }
-      
-      .swiper-pagination-bullet-active {
-        background-color: #3b82f6 !important;
-        opacity: 1 !important;
-        transform: scale(1.3) !important;
-      }
-      
-      .swiper-slide {
-        transition: all 0.3s ease;
-      }
-      
-      .swiper-slide-active {
-        transform: scale(1.02);
-      }
-      
-             /* Ensure all text in cards is white */
-       .swiper-slide h3,
-       .swiper-slide p,
-       .swiper-slide button {
-         color: white !important;
-       }
-       
-       .swiper-slide p {
-         color: rgba(255, 255, 255, 0.95) !important;
-       }
-       
-       /* Better card styling */
-       .swiper-slide .bg-gradient-to-br {
-         background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
-       }
-       
-               .swiper-slide .rounded-2xl {
-          border-radius: 1rem !important;
-        }
-        
-                 /* Force show navigation arrows */
-         .swiper-button-next,
-         .swiper-button-prev {
-           opacity: 1 !important;
-           visibility: visible !important;
-           pointer-events: auto !important;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- <link href="css/all.min.css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-         }
-         
-         /* Hide default Swiper arrows and use custom ones */
-         .swiper-button-next::after,
-         .swiper-button-prev::after {
-           display: block !important;
-           width: 100% !important;
-           height: 100% !important;
-           display: flex !important;
-           align-items: center !important;
-           justify-content: center !important;
-         }
-         
-         /* Make all cards same height */
-         .swiper-slide {
-           height: auto !important;
-         }
-         
-         .swiper-slide .bg-gradient-to-br {
-           height: 100% !important;
-           display: flex !important;
-           flex-direction: column !important;
-         }
-         
-         .swiper-slide .p-6 {
-           flex: 1 !important;
-           display: flex !important;
-           flex-direction: column !important;
-           justify-content: space-between !important;
-         }
-         
-         .swiper-slide .flex.flex-col.space-y-3 {
-           margin-top: auto !important;
-         }
-    </style>
+  <link href="css/output.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=El+Messiri:wght@400..700&family=Playwrite+TZ+Guides&display=swap"
+    rel="stylesheet" />
 
-  </head>
-  <body class="font-roboto dinarone">
-    <!-- nav -->
-    <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/20 shadow-lg"
-    >
-      <div class="container mx-auto px-4 py-3">
-        <div class="flex justify-between items-center">
-          <!-- Logo -->
-          <div class="flex items-center space-x-3">
-            <img
-              src="./new/star.png"
-              alt="Logo"
-              class="w-40 "
-            />
-            
-          </div>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  
 
-          <!-- Contact Icons -->
-          <div class="flex items-center space-x-4 md:space-x-6 space-x-reverse">
-            <!-- Phone -->
-            <a
-              href="tel:+966501234567"
-              class="group flex items-center space-x-2 space-x-reverse text-white"
-              title="اتصل بنا"
-            >
-              <div
-                class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-sky-500/20 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-all duration-300"
-              >
-                <i class="fa-solid fa-phone text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
-              </div>
-              <span class="text-xs md:text-sm dinarone hidden lg:block"
-                >+966 50 123 4567</span
-              >
-            </a>
+</head>
 
-            <!-- WhatsApp -->
-            <a
-              href="https://wa.me/966501234567"
-              target="_blank"
-              class="group flex items-center space-x-2 space-x-reverse text-white"
-              title="واتساب"
-            >
-              <div
-                class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-green-500/20 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-all duration-300"
-              >
-                <i
-                  class="fab fa-whatsapp text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"
-                ></i>
-              </div>
-              <span class="text-xs md:text-sm dinarone hidden lg:block"
-                >واتساب</span
-              >
-            </a>
+<body class="font-roboto dinarone">
+  <!-- nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/20 shadow-lg">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3">
+          <img src="./new/star.png" alt="Logo" class="w-40 " />
 
-            <!-- Email -->
-            <a
-              href="mailto:info@newstar.com"
-              class="group flex items-center space-x-2 space-x-reverse text-white"
-              title="راسلنا"
-            >
-              <div
-                class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-orange-500/20 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300"
-              >
-                <i
-                  class="fas fa-envelope text-sm md:text-lg"
-                ></i>
-              </div>
-              <span class="text-xs md:text-sm dinarone hidden lg:block"
-                >info@newstar.com</span
-              >
-            </a>
-          </div>
+        </div>
+
+        <!-- Contact Icons -->
+        <div class="flex items-center space-x-4 md:space-x-6 space-x-reverse">
+          <!-- Phone -->
+          <a href="tel:+966501234567" class="group flex items-center space-x-2 space-x-reverse text-white"
+            title="اتصل بنا">
+            <div
+              class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-sky-500/20 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-all duration-300">
+              <i
+                class="fa-solid fa-phone text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <span class="text-xs md:text-sm dinarone hidden lg:block">+966 50 123 4567</span>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/966501234567" target="_blank"
+            class="group flex items-center space-x-2 space-x-reverse text-white" title="واتساب">
+            <div
+              class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-green-500/20 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-all duration-300">
+              <i class="fab fa-whatsapp text-sm md:text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            </div>
+            <span class="text-xs md:text-sm dinarone hidden lg:block">واتساب</span>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:info@newstar.com" class="group flex items-center space-x-2 space-x-reverse text-white"
+            title="راسلنا">
+            <div
+              class="w-8 h-8 md:w-10 md:h-10 mr-2 bg-orange-500/20 rounded-full flex items-center justify-center hover:bg-orange-500 transition-all duration-300">
+              <i class="fas fa-envelope text-sm md:text-lg"></i>
+            </div>
+            <span class="text-xs md:text-sm dinarone hidden lg:block">info@newstar.com</span>
+          </a>
         </div>
       </div>
-    </nav>
-    <!-- nav end -->
+    </div>
+  </nav>
+  <!-- nav end -->
 
-    <main>
-      <!-- hero section -->
-      <div class="hero sm:bg-center bg-cover bg-[20%] h-screen">
-        <div
-          class="flex justify-center md:items-end items-center flex-col h-full md:w-3/4"
-        >
-          <p class="text-white text-4xl font-bold">
-            اختيارك الاول فى عالم التطبيقات
-          </p>
-          <p
-            class="text-white text-4xl clave font-bold tracking-[0.2em] uppercase mt-14"
-          >
-            Tech starts with us
-          </p>
+  <main>
+    <!-- hero section -->
+    <div class="hero sm:bg-center bg-cover bg-[20%] h-screen">
+      <div class="flex justify-center md:items-end items-center flex-col h-full w-full px-4 md:px-10 md:w-3/4">
+        <p class="text-white text-2xl md:text-4xl font-bold text-center">
+          اختيارك الاول فى عالم التطبيقات
+        </p>
+        <p class="text-white text-2xl md:text-4xl clave font-bold tracking-[0.2em] uppercase mt-8 md:mt-14 text-center">
+          Tech starts with us
+        </p>
 
-          <button
-            class="text-white border text-2xl clave tracking-[0.2em] border-white px-5 py-2 absolute bottom-10 md:mr-20 rounded-full hover:bg-white hover:text-black transition-all"
-          >
-            Customer support
-          </button>
-        </div>
+        <button class="text-white border text-lg md:text-2xl clave tracking-[0.2em] border-white px-4 md:px-5 py-2 absolute bottom-10 md:mr-20 rounded-full hover:bg-white hover:text-black transition-all">
+          Customer support
+        </button>
       </div>
-      <!-- hero section End -->
+    </div>
+    <!-- hero section End -->
 
-      <!-- holder -->
-      <div class="bg-main bg-cover pt-5">
-        <!--packges-->
-        <div class="flex justify-center items-center flex-col pt-10 px-4 lg:px-8 xl:px-40">
-          <h2 class="text-5xl text-white font-bold mb-10">منصاتنا</h2>
-          
-          <!-- Swiper -->
-          <div class="swiper packages-swiper w-full">
+    <!-- holder -->
+    <div class="bg-main bg-cover pt-5">
+      <!--packges-->
+      <div class="flex justify-center items-center flex-col pt-10 px-4 lg:px-8 xl:px-40">
+        <h2 class="text-5xl text-white font-bold mb-10">منصاتنا</h2>
+
+        <!-- Swiper Container with relative positioning -->
+        <div class="relative w-full px-0 md:px-20">
+                     <!-- Navigation arrows outside - Hidden on mobile -->
+           <button type="button" class="swiper-button-next-custom absolute top-1/2 -translate-y-1/2 right-0 w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full border-2 border-white/20 text-white z-[9999] items-center justify-center shadow-lg hover:shadow-xl hover:from-blue-600 hover:to-blue-700 transition-all duration-300 group pointer-events-auto hidden md:flex">
+             <i class="fas fa-chevron-right text-lg group-hover:scale-110 transition-transform pointer-events-none"></i>
+           </button>
+           
+           <button type="button" class="swiper-button-prev-custom absolute top-1/2 -translate-y-1/2 left-0 w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full border-2 border-white/20 text-white z-[9999] items-center justify-center shadow-lg hover:shadow-xl hover:from-blue-600 hover:to-blue-700 transition-all duration-300 group pointer-events-auto hidden md:flex">
+             <i class="fas fa-chevron-left text-lg group-hover:scale-110 transition-transform pointer-events-none"></i>
+           </button>
+
+           <!-- Swiper -->
+           <div class="swiper packages-swiper w-full">
             <div class="swiper-wrapper">
-                             <!-- Slide 1 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                    <img src="./new/1.jpg" alt="منصة ادارة المعاهد" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <img src="./new/1.jpg" alt="منصة ادارة المعاهد"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   </div>
                   <div class="p-6 flex flex-col flex-1">
@@ -289,10 +127,12 @@
                       تشمل كل متطلبات المعاهد الإدارية واللوجيستية
                     </p>
                     <div class="flex flex-col space-y-3 mt-auto">
-                      <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                         النسخة التجريبية
                       </button>
-                      <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                         اطلب عرض السعر
                       </button>
                     </div>
@@ -300,11 +140,13 @@
                 </div>
               </div>
 
-                             <!-- Slide 2 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                    <img src="./new/2.jpg" alt="منصة ادارة المعاهد" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <img src="./new/2.jpg" alt="منصة ادارة المعاهد"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   </div>
                   <div class="p-6 flex flex-col flex-1">
@@ -316,10 +158,12 @@
                       تشمل كل متطلبات المعاهد الإدارية واللوجيستية
                     </p>
                     <div class="flex flex-col space-y-3 mt-auto">
-                      <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                         النسخة التجريبية
                       </button>
-                      <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                         اطلب عرض السعر
                       </button>
                     </div>
@@ -327,667 +171,517 @@
                 </div>
               </div>
 
-                                            <!-- Slide 3 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                     <img src="./new/2.jpg" alt="منصة ادارة المعاهد" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                   </div>
-                   <div class="p-6 flex flex-col flex-1">
-                     <h3 class="text-2xl font-bold text-white mb-4 text-center">
-                       منصة ادارة المعاهد
-                     </h3>
-                     <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
-                       منصة الكترونية شاملة لإدارة مراكز التدريب , معاهد , معاهد عليا
-                       تشمل كل متطلبات المعاهد الإدارية واللوجيستية
-                     </p>
-                     <div class="flex flex-col space-y-3 mt-auto">
-                       <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         النسخة التجريبية
-                       </button>
-                       <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         اطلب عرض السعر
-                       </button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
+                    <img src="./new/2.jpg" alt="منصة ادارة المعاهد"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">
+                      منصة ادارة المعاهد
+                    </h3>
+                    <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
+                      منصة الكترونية شاملة لإدارة مراكز التدريب , معاهد , معاهد عليا
+                      تشمل كل متطلبات المعاهد الإدارية واللوجيستية
+                    </p>
+                    <div class="flex flex-col space-y-3 mt-auto">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        النسخة التجريبية
+                      </button>
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        اطلب عرض السعر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-               <!-- Slide 4 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                     <img src="./new/1.jpg" alt="منصة ادارة المدارس" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                   </div>
-                   <div class="p-6 flex flex-col flex-1">
-                     <h3 class="text-2xl font-bold text-white mb-4 text-center">
-                       منصة ادارة المدارس
-                     </h3>
-                     <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
-                       نظام متكامل لإدارة المدارس والطلاب والمعلمين
-                       مع تتبع الأداء والإحصائيات التفصيلية
-                     </p>
-                     <div class="flex flex-col space-y-3 mt-auto">
-                       <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         النسخة التجريبية
-                       </button>
-                       <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         اطلب عرض السعر
-                       </button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
+                    <img src="./new/1.jpg" alt="منصة ادارة المدارس"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">
+                      منصة ادارة المدارس
+                    </h3>
+                    <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
+                      نظام متكامل لإدارة المدارس والطلاب والمعلمين
+                      مع تتبع الأداء والإحصائيات التفصيلية
+                    </p>
+                    <div class="flex flex-col space-y-3 mt-auto">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        النسخة التجريبية
+                      </button>
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        اطلب عرض السعر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-               <!-- Slide 5 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                     <img src="./new/2.jpg" alt="منصة ادارة المستشفيات" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                   </div>
-                   <div class="p-6 flex flex-col flex-1">
-                     <h3 class="text-2xl font-bold text-white mb-4 text-center">
-                       منصة ادارة المستشفيات
-                     </h3>
-                     <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
-                       نظام شامل لإدارة المستشفيات والمرضى والأطباء
-                       مع جدولة المواعيد وإدارة السجلات الطبية
-                     </p>
-                     <div class="flex flex-col space-y-3 mt-auto">
-                       <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         النسخة التجريبية
-                       </button>
-                       <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         اطلب عرض السعر
-                       </button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- Slide 5 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
+                    <img src="./new/2.jpg" alt="منصة ادارة المستشفيات"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">
+                      منصة ادارة المستشفيات
+                    </h3>
+                    <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
+                      نظام شامل لإدارة المستشفيات والمرضى والأطباء
+                      مع جدولة المواعيد وإدارة السجلات الطبية
+                    </p>
+                    <div class="flex flex-col space-y-3 mt-auto">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        النسخة التجريبية
+                      </button>
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        اطلب عرض السعر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-               <!-- Slide 6 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                     <img src="./new/1.jpg" alt="منصة ادارة المطاعم" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                   </div>
-                   <div class="p-6 flex flex-col flex-1">
-                     <h3 class="text-2xl font-bold text-white mb-4 text-center">
-                       منصة ادارة المطاعم
-                     </h3>
-                     <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
-                       نظام متطور لإدارة المطاعم والطلبات والمخزون
-                       مع إدارة الطاولات والموظفين والمبيعات
-                     </p>
-                     <div class="flex flex-col space-y-3 mt-auto">
-                       <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         النسخة التجريبية
-                       </button>
-                       <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         اطلب عرض السعر
-                       </button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- Slide 6 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
+                    <img src="./new/1.jpg" alt="منصة ادارة المطاعم"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">
+                      منصة ادارة المطاعم
+                    </h3>
+                    <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
+                      نظام متطور لإدارة المطاعم والطلبات والمخزون
+                      مع إدارة الطاولات والموظفين والمبيعات
+                    </p>
+                    <div class="flex flex-col space-y-3 mt-auto">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        النسخة التجريبية
+                      </button>
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        اطلب عرض السعر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-               <!-- Slide 7 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                     <img src="./new/2.jpg" alt="منصة ادارة الصالونات" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                   </div>
-                   <div class="p-6 flex flex-col flex-1">
-                     <h3 class="text-2xl font-bold text-white mb-4 text-center">
-                       منصة ادارة الصالونات
-                     </h3>
-                     <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
-                       نظام متخصص لإدارة صالونات التجميل والحلاقة
-                       مع جدولة المواعيد وإدارة الخدمات والأسعار
-                     </p>
-                     <div class="flex flex-col space-y-3 mt-auto">
-                       <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         النسخة التجريبية
-                       </button>
-                       <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         اطلب عرض السعر
-                       </button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- Slide 7 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
+                    <img src="./new/2.jpg" alt="منصة ادارة الصالونات"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">
+                      منصة ادارة الصالونات
+                    </h3>
+                    <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
+                      نظام متخصص لإدارة صالونات التجميل والحلاقة
+                      مع جدولة المواعيد وإدارة الخدمات والأسعار
+                    </p>
+                    <div class="flex flex-col space-y-3 mt-auto">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        النسخة التجريبية
+                      </button>
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        اطلب عرض السعر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-               <!-- Slide 8 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                     <img src="./new/1.jpg" alt="منصة ادارة الصيدليات" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                   </div>
-                   <div class="p-6 flex flex-col flex-1">
-                     <h3 class="text-2xl font-bold text-white mb-4 text-center">
-                       منصة ادارة الصيدليات
-                     </h3>
-                     <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
-                       نظام شامل لإدارة الصيدليات والمخزون الدوائي
-                       مع تتبع تاريخ انتهاء الصلاحية والوصفات الطبية
-                     </p>
-                     <div class="flex flex-col space-y-3 mt-auto">
-                       <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         النسخة التجريبية
-                       </button>
-                       <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         اطلب عرض السعر
-                       </button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- Slide 8 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
+                    <img src="./new/1.jpg" alt="منصة ادارة الصيدليات"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">
+                      منصة ادارة الصيدليات
+                    </h3>
+                    <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
+                      نظام شامل لإدارة الصيدليات والمخزون الدوائي
+                      مع تتبع تاريخ انتهاء الصلاحية والوصفات الطبية
+                    </p>
+                    <div class="flex flex-col space-y-3 mt-auto">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        النسخة التجريبية
+                      </button>
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        اطلب عرض السعر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-               <!-- Slide 9 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                     <img src="./new/2.jpg" alt="منصة ادارة الصالات الرياضية" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                   </div>
-                   <div class="p-6 flex flex-col flex-1">
-                     <h3 class="text-2xl font-bold text-white mb-4 text-center">
-                       منصة ادارة الصالات الرياضية
-                     </h3>
-                     <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
-                       نظام متطور لإدارة الصالات الرياضية والاشتراكات
-                       مع جدولة الحصص وتتبع تقدم الأعضاء
-                     </p>
-                     <div class="flex flex-col space-y-3 mt-auto">
-                       <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         النسخة التجريبية
-                       </button>
-                       <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         اطلب عرض السعر
-                       </button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- Slide 9 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
+                    <img src="./new/2.jpg" alt="منصة ادارة الصالات الرياضية"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">
+                      منصة ادارة الصالات الرياضية
+                    </h3>
+                    <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
+                      نظام متطور لإدارة الصالات الرياضية والاشتراكات
+                      مع جدولة الحصص وتتبع تقدم الأعضاء
+                    </p>
+                    <div class="flex flex-col space-y-3 mt-auto">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        النسخة التجريبية
+                      </button>
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        اطلب عرض السعر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-               <!-- Slide 10 -->
-               <div class="swiper-slide">
-                 <div class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
-                   <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
-                     <img src="./new/1.jpg" alt="منصة ادارة الفنادق" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                   </div>
-                   <div class="p-6 flex flex-col flex-1">
-                     <h3 class="text-2xl font-bold text-white mb-4 text-center">
-                       منصة ادارة الفنادق
-                     </h3>
-                     <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
-                       نظام متكامل لإدارة الفنادق والحجوزات والغرف
-                       مع إدارة الموظفين والخدمات والمدفوعات
-                     </p>
-                     <div class="flex flex-col space-y-3 mt-auto">
-                       <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         النسخة التجريبية
-                       </button>
-                       <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                         اطلب عرض السعر
-                       </button>
-                     </div>
-                   </div>
-                 </div>
-               </div>
+              <!-- Slide 10 -->
+              <div class="swiper-slide">
+                <div
+                  class="bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl border border-blue-500/30 hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 overflow-hidden h-full flex flex-col">
+                  <div class="relative w-full h-56 overflow-hidden flex-shrink-0">
+                    <img src="./new/1.jpg" alt="منصة ادارة الفنادق"
+                      class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div class="p-6 flex flex-col flex-1">
+                    <h3 class="text-2xl font-bold text-white mb-4 text-center">
+                      منصة ادارة الفنادق
+                    </h3>
+                    <p class="text-white/90 text-center mb-6 leading-relaxed flex-1">
+                      نظام متكامل لإدارة الفنادق والحجوزات والغرف
+                      مع إدارة الموظفين والخدمات والمدفوعات
+                    </p>
+                    <div class="flex flex-col space-y-3 mt-auto">
+                      <button
+                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        النسخة التجريبية
+                      </button>
+                      <button
+                        class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 px-4 rounded-xl font-semibold hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        اطلب عرض السعر
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <!-- Navigation arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
+
+                                   </div>
+          
+          <!-- Pagination outside -->
+          <div class="swiper-pagination-custom flex justify-center mt-8 space-x-2">
+            <!-- Pagination bullets will be generated by JavaScript -->
           </div>
-        </div>
-
-        <!-- services -->
-        <div class="xl:px-72 lg:px-52 px-10 mt-10" dir="rtl">
-          <h2 class="text-5xl text-white font-bold">خدماتنا</h2>
-          <hr
-            class="bg-sky-500 border border-sky-500 h-2 rounded-xl w-1/3 md:w-2/12"
-          />
-
-          <div
-            class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-14 mt-10 lg:px-0 md:px-20"
-          >
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/w.png"
-                class="w-1/2 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white md:px-5 py-2 rounded-full text-2xl text-center"
-              >
-                تصميم مواقع
-              </p>
-            </div>
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/ll.png"
-                class="w-1/2 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-2xl text-center"
-              >
-                برمجة التطبيقات
-              </p>
-            </div>
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/v.png"
-                class="w-1/2 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-2xl text-center"
-              >
-                خدمات الاستضافة
-              </p>
-            </div>
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/e.png"
-                class="w-1/2 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-2xl text-center"
-              >
-                التسويق الإلكترونى
-              </p>
-            </div>
           </div>
-        </div>
-        <!-- services end -->
-
-        <!-- clients -->
-        <div class="md:px-30 xl:px-72 lg:px-52 px-10 mt-20" dir="rtl">
-          <h2 class="text-5xl text-white font-bold">عملائنا</h2>
-          <hr
-            class="bg-sky-500 border border-sky-500 h-2 rounded-xl w-1/3 md:w-2/12"
-          />
-          <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 gap-y-14 mt-10">
-            <div class="flex flex-col justify-center items-center relative">
-              <img
-                src="./new/logo.png"
-                class="md:w-3/4 w-1/2 ms:mb-5 mb-12"
-                alt=""
-              />
-              <p class="text-white text-2xl text-center absolute bottom-0">
-                شركة التقنية الحديثة للخرسانة
-              </p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center relative">
-              <img src="./new/ssi1.png" class="w-[80px] mb-10" alt="" />
-              <p class="text-white text-xl text-center absolute bottom-0">
-                معهد مهارات السعودية العالى لللتدريب
-              </p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center relative">
-              <img src="./new/ssl.png" class="w-[90px] mb-10" alt="" />
-              <p class="text-white text-2xl text-center absolute bottom-0">
-                شركة مهارات السعودية المحدودة
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- clients end -->
-
-        <!-- projects -->
-        <div class="md:px-30 xl:px-72 lg:px-52 px-10 mt-20" dir="rtl">
-          <h2 class="text-5xl text-white font-bold">مشروعاتنا</h2>
-          <hr
-            class="bg-sky-500 border border-sky-500 h-2 rounded-xl w-1/3 md:w-2/12"
-          />
-          <div
-            class="md:flex gap-4 mt-10 justify-center items-center flex-wrap xl:flex-nowrap"
-          >
-            <div
-              class="xl:w-[38%] md:w-5/12 relative flex flex-col justify-center items-center mb-10 md:after:bg-white after:h-full after:-left-3 after:absolute after:w-[1px]"
-            >
-              <img
-                src="./new/icons/m.png"
-                class="w-1/4 mb-8 mx-auto md:mt-3"
-                alt=""
-              />
-              <p class="text-white text-xl text-center absolute bottom-0">
-                Institute Mangment System
-              </p>
-            </div>
-
-            <div
-              class="xl:w-1/4 md:w-5/12 relative flex flex-col justify-center items-center mb-10 xl:after:bg-white after:h-full after:-left-3 after:absolute after:w-[1px]"
-            >
-              <img
-                src="./new/icons/6.png"
-                class="w-1/4 mb-8 md:4/12 lg:w-5/12 mx-auto"
-                alt=""
-              />
-              <p class="text-white text-xl text-center absolute bottom-0">
-                Archiving System
-              </p>
-            </div>
-
-            <div
-              class="xl:w-1/3 md:w-5/12 relative flex flex-col justify-center items-center mb-10 md:after:bg-white after:h-full after:-left-3 lg:after:-left-2 after:absolute after:w-[1px]"
-            >
-              <img
-                src="./new/icons/22.png"
-                class="w-1/4 lg:w-4/12 mb-8 mx-auto"
-                alt=""
-              />
-              <p class="text-white text-xl text-center absolute bottom-0">
-                Car Service System
-              </p>
-            </div>
-
-            <div
-              class="xl:w-5/12 md:w-5/12 relative flex flex-col justify-center items-center mb-10"
-            >
-              <img
-                src="./new/icons/h.png"
-                class="w-1/4 lg:w-[30%] mb-8 lg:mt-0 lg:mb-5 mx-auto"
-                alt=""
-              />
-              <p class="text-white text-center text-base md:text-xl absolute bottom-0">
-                Beauty salon Mangment System
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="md:grid md:grid-cols-6 xl:grid-cols-10 gap-4 justify-start items-center mx-16 lg:mx-0"
-          >
-            <div
-              class="md:col-span-3 xl:w-[91%] relative flex flex-col justify-center items-center mb-10 md:after:bg-white after:h-full after:-left-3 after:absolute after:w-[1px]"
-            >
-              <img
-                src="./new/icons/m.png"
-                class="w-1/4 mb-8 mx-auto md:mt-3"
-                alt=""
-              />
-              <p class="text-white text-xl text-center absolute bottom-0">
-                FitTown
-              </p>
-            </div>
-
-            <div
-              class="xl:col-span-2 md:col-span-3 relative flex flex-col justify-center items-center mb-10 xl:after:bg-white after:h-full after:left-0 after:absolute after:w-[1px]"
-            >
-              <img
-                src="./new/icons/6.png"
-                class="w-1/4 mb-8 xl:w-5/12 mx-auto"
-                alt=""
-              />
-              <p class="text-white text-xl text-center absolute bottom-0">
-                Foody Gurd
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- projects end -->
-
-        <!-- Why us -->
-        <div
-          class="px-9 sm:px-18 md:px-30 xl:px-72 lg:px-48 mt-32 pb-10 pt-1 bg-black/20 relative"
-          dir="rtl"
-        >
-          <div
-            class="flex justify-center items-center flex-col gap-y-2 absolute right-1/2 translate-x-1/2 -top-14"
-          >
-            <h2 class="text-5xl text-white font-bold">لماذا نحن</h2>
-            <hr
-              class="bg-orange-500 border border-orange-500 h-2 rounded-xl w-32"
-            />
-          </div>
-
-          <div
-            class="grid md:grid-cols-2 xl:grid-cols-4 gap-5 gap-y-14 mt-10 px-14 xl:px-0 lg:px-20"
-          >
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/o1.png"
-                class="w-1/3 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white md:px-5 py-2 rounded-full text-2xl text-center"
-              >
-                24/7 دعم فنى
-              </p>
-              <p class="text-white text-center mt-2">
-                نتواجد على مدار الساعة لخدمتكم
-              </p>
-            </div>
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/o2.png"
-                class="w-1/3 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-2xl text-center"
-              >
-                التوفير
-              </p>
-              <p class="text-white text-center mt-2">
-                جودة عالية بقيمة مميزة
-              </p>
-            </div>
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/o3.png"
-                class="w-1/3 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-2xl text-center"
-              >
-                خدمات متكاملة
-              </p>
-              <p class="text-white text-center mt-2">
-                جمعنا ما تحتاج لراحتك
-              </p>
-            </div>
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/o4.png"
-                class="w-1/3 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-2xl text-center"
-              >
-                رضا العملاء
-              </p>
-              <p class="text-white text-center mt-2">
-                رضاكم هدفنا الاول
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="grid md:grid-cols-2 xl:grid-cols-3 mt-10 gap-x-10 gap-y-14 px-14 lg:mx-0 lg:col-span-4"
-          >
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/r1.png"
-                class="w-1/3 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-2xl text-center"
-              >
-                السرعة
-              </p>
-              <p class="text-white text-center mt-2">
-                إتقان فى العمل وسرعة فى الإنجاز
-              </p>
-            </div>
-
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/e.png"
-                class="w-1/3 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-xl text-center"
-              >
-                التسويق الإلكترونى
-              </p>
-              <p class="text-white text-center mt-2">
-                نتواجد على مدار الساعة لخدمتكم
-              </p>
-            </div>
-
-            <div class="flex flex-col mx-24 md:mx-0">
-              <img
-                src="./new/icons/i.png"
-                class="w-1/3 md:w-1/3 mb-1 mx-auto"
-                alt=""
-              />
-              <p
-                class="bg-sky-500 text-white px-5 py-2 rounded-full text-2xl text-center"
-              >
-                درع الحماية
-              </p>
-              <p class="text-white text-center mt-2">
-                أساس استمرار النجاح الأمن
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Why us end -->
-
-        <!-- Form -->
-
-        <div class="md:px-30 lg:px-72 px-10 mt-20" dir="rtl">
-          <h2 class="text-5xl text-white font-bold text-center">
-            تحتاج لمساعدة ؟
-          </h2>
-
-          <h2 class="text-3xl text-orange-500 font-bold text-center mt-3">
-            لا تتردد فى التواصل معنا
-          </h2>
-
-          <p id="error" class="text-red-500 text-center hidden mt-5 text-2xl">
-            برجاء ملئ جميع الحقول
-          </p>
-
-          <form class="mt-5 flex flex-col gap-y-5 message-form" action="POST">
-            <label for="name" class="text-white text-xl">الأسم</label>
-            <input
-              class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl"
-              type="text"
-              id="name"
-              name="name"
-            />
-            <label for="phone" class="text-white text-xl">الجوال</label>
-            <input
-              class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl"
-              dir="rtl"
-              type="tel"
-              id="phone"
-              name="phone"
-            />
-            <label for="email" class="text-white text-xl"
-              >البريد الالكترونى</label
-            >
-            <input
-              class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl"
-              type="email"
-              id="email"
-              name="email"
-            />
-            <label for="message" class="text-white text-xl">الموضوع</label>
-            <textarea
-              class="bg-blue-950 py-2 border-white border px-2 text-white rounded-xl"
-              id="message"
-              name="message"
-            ></textarea>
-            <button
-              id="form-button"
-              type="submit"
-              class="text-white bg-orange-500 border px-5 py-2 mt-5 w-1/4 mx-auto hover:bg-white hover:text-black transition-all"
-            >
-              أرسل
-            </button>
-          </form>
-        </div>
-
-        <!-- Form end-->
-        <footer
-          class="bg-black/80 backdrop-blur-sm border-t border-white/20 py-6 mt-20"
-        >
-          <div class="container mx-auto px-4">
-            <div class="flex justify-center items-center">
-              <p class="text-white text-lg md:text-xl font-bold font-roboto">
-                Star Tech © 2025
-              </p>
-            </div>
-          </div>
-        </footer>
       </div>
 
-      <!-- holder End -->
-    </main>
+      <!-- services -->
+      <div class="px-4 md:px-10 xl:px-72 lg:px-52 mt-10" dir="rtl">
+        <h2 class="text-3xl md:text-5xl text-white font-bold text-center md:text-right">خدماتنا</h2>
+        <hr class="bg-sky-500 border border-sky-500 h-2 rounded-xl w-1/2 md:w-1/3 lg:w-2/12 mx-auto md:mx-0" />
 
-    <script src="js/index.js"></script>
-    <script src="js/all.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      // Initialize Swiper
-      var swiper = new Swiper(".packages-swiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 40,
-          },
-        },
-      });
-    </script>
-  </body>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-8 md:gap-y-14 mt-8 md:mt-10 px-0 md:px-20 lg:px-0">
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/w.png" class="w-16 md:w-1/2 lg:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              تصميم مواقع
+            </p>
+          </div>
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/ll.png" class="w-16 md:w-1/2 lg:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              برمجة التطبيقات
+            </p>
+          </div>
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/v.png" class="w-16 md:w-1/2 lg:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              خدمات الاستضافة
+            </p>
+          </div>
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/e.png" class="w-16 md:w-1/2 lg:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              التسويق الإلكترونى
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- services end -->
+
+      <!-- clients -->
+      <div class="md:px-30 xl:px-72 lg:px-52 px-10 mt-20" dir="rtl">
+        <h2 class="text-5xl text-white font-bold">عملائنا</h2>
+        <hr class="bg-sky-500 border border-sky-500 h-2 rounded-xl w-1/3 md:w-2/12" />
+        <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 gap-y-14 mt-10">
+          <div class="flex flex-col justify-center items-center relative">
+            <img src="./new/logo.png" class="md:w-3/4 w-1/2 ms:mb-5 mb-12" alt="" />
+            <p class="text-white text-2xl text-center absolute bottom-0">
+              شركة التقنية الحديثة للخرسانة
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center relative">
+            <img src="./new/ssi1.png" class="w-[80px] mb-10" alt="" />
+            <p class="text-white text-xl text-center absolute bottom-0">
+              معهد مهارات السعودية العالى لللتدريب
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center relative">
+            <img src="./new/ssl.png" class="w-[90px] mb-10" alt="" />
+            <p class="text-white text-2xl text-center absolute bottom-0">
+              شركة مهارات السعودية المحدودة
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- clients end -->
+
+      <!-- projects -->
+      <div class="px-4 md:px-10 xl:px-72 lg:px-52 mt-12 md:mt-20" dir="rtl">
+        <h2 class="text-4xl md:text-6xl text-white font-bold text-center md:text-right">مشروعاتنا</h2>
+        <hr class="bg-sky-500 border border-sky-500 h-2 rounded-xl w-1/2 md:w-1/3 lg:w-2/12 mx-auto md:mx-0" />
+        
+        <!-- First row: 4 projects -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 mt-8 md:mt-10">
+          <div class="flex flex-col justify-center items-center space-y-4 md:space-y-0 md:relative bg-white/5 rounded-xl p-6 md:bg-transparent md:p-4  min-h-[200px] md:min-h-[250px]">
+            <img src="./new/icons/m.png" class="w-16 md:w-20 lg:w-24 mb-4 md:mb-4" alt="" />
+            <p class="text-white text-lg md:text-xl lg:text-2xl text-center  md:bottom-0 font-medium">
+              Institute Mangment System
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center space-y-4 md:space-y-0 md:relative bg-white/5 rounded-xl p-6 md:bg-transparent md:p-4 lg:p-6 min-h-[200px] md:min-h-[250px]">
+            <img src="./new/icons/6.png" class="w-16 md:w-20 lg:w-24 mb-4 md:mb-4" alt="" />
+            <p class="text-white text-lg md:text-xl lg:text-2xl text-center  md:bottom-0 font-medium">
+              Archiving System
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center space-y-4 md:space-y-0 md:relative bg-white/5 rounded-xl p-6 md:bg-transparent md:p-4 lg:p-6 min-h-[200px] md:min-h-[250px]">
+            <img src="./new/icons/22.png" class="w-16 md:w-20 lg:w-24 mb-4 md:mb-4" alt="" />
+            <p class="text-white text-lg md:text-xl lg:text-2xl text-center  md:bottom-0 font-medium">
+              Car Service System
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center space-y-4 md:space-y-0 md:relative bg-white/5 rounded-xl p-6 md:bg-transparent md:p-4 lg:p-6 min-h-[200px] md:min-h-[250px]">
+            <img src="./new/icons/h.png" class="w-16 md:w-20 lg:w-24 mb-4 md:mb-4" alt="" />
+            <p class="text-white text-center text-lg md:text-xl lg:text-2xl  md:bottom-0 font-medium">
+              Salon Mangment System
+            </p>
+          </div>
+        </div>
+
+        <!-- Second row: 2 projects centered -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 mt-6 md:mt-8 lg:mt-10 md:max-w-2xl lg:max-w-3xl mx-auto">
+          <div class="flex flex-col justify-center items-center space-y-4 md:space-y-0 md:relative bg-white/5 rounded-xl p-6 md:bg-transparent md:p-4 lg:p-6 min-h-[200px] md:min-h-[250px]">
+            <img src="./new/icons/m.png" class="w-16 md:w-20 lg:w-24 mb-4 md:mb-4" alt="" />
+            <p class="text-white text-lg md:text-xl lg:text-2xl text-center  md:bottom-0 font-medium">
+              FitTown
+            </p>
+          </div>
+
+          <div class="flex flex-col justify-center items-center space-y-4 md:space-y-0 md:relative bg-white/5 rounded-xl p-6 md:bg-transparent md:p-4 lg:p-6 min-h-[200px] md:min-h-[250px]">
+            <img src="./new/icons/6.png" class="w-16 md:w-20 lg:w-24 mb-4 md:mb-4" alt="" />
+            <p class="text-white text-lg md:text-xl lg:text-2xl text-center  md:bottom-0 font-medium">
+              Foody Gurd
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- projects end -->
+
+      <!-- Why us -->
+      <div class="px-4 md:px-10 xl:px-72 lg:px-48 mt-20 md:mt-32 pb-10 pt-16 md:pt-1 bg-black/20 relative" dir="rtl">
+        <div class="flex justify-center items-center flex-col gap-y-2 mb-8 md:absolute md:right-1/2 md:translate-x-1/2 md:-top-14 md:mb-0">
+          <h2 class="text-3xl md:text-5xl text-white font-bold text-center">لماذا نحن</h2>
+          <hr class="bg-orange-500 border border-orange-500 h-2 rounded-xl w-24 md:w-32" />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 gap-y-8 md:gap-5 md:gap-y-14 mt-8 md:mt-10 px-0 md:px-14 xl:px-0 lg:px-20">
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/o1.png" class="w-16 md:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              24/7 دعم فنى
+            </p>
+            <p class="text-white text-center mt-2 text-sm md:text-base">
+              نتواجد على مدار الساعة لخدمتكم
+            </p>
+          </div>
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/o2.png" class="w-16 md:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              التوفير
+            </p>
+            <p class="text-white text-center mt-2 text-sm md:text-base">
+              جودة عالية بقيمة مميزة
+            </p>
+          </div>
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/o3.png" class="w-16 md:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              خدمات متكاملة
+            </p>
+            <p class="text-white text-center mt-2 text-sm md:text-base">
+              جمعنا ما تحتاج لراحتك
+            </p>
+          </div>
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/o4.png" class="w-16 md:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              رضا العملاء
+            </p>
+            <p class="text-white text-center mt-2 text-sm md:text-base">
+              رضاكم هدفنا الاول
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 md:mt-10 gap-6 gap-y-8 md:gap-x-10 md:gap-y-14 px-0 md:px-14 lg:px-0">
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/r1.png" class="w-16 md:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              السرعة
+            </p>
+            <p class="text-white text-center mt-2 text-sm md:text-base">
+              إتقان فى العمل وسرعة فى الإنجاز
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/e.png" class="w-16 md:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-xl text-center w-full">
+              التسويق الإلكترونى
+            </p>
+            <p class="text-white text-center mt-2 text-sm md:text-base">
+              نتواجد على مدار الساعة لخدمتكم
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center mx-4 md:mx-0">
+            <img src="./new/icons/i.png" class="w-16 md:w-1/3 mb-3 md:mb-1" alt="" />
+            <p class="bg-sky-500 text-white px-4 md:px-5 py-2 rounded-full text-lg md:text-2xl text-center w-full">
+              درع الحماية
+            </p>
+            <p class="text-white text-center mt-2 text-sm md:text-base">
+              أساس استمرار النجاح الأمن
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why us end -->
+
+      <!-- Form -->
+
+      <div class="px-4 md:px-10 lg:px-72 mt-12 md:mt-20" dir="rtl">
+        <h2 class="text-3xl md:text-5xl text-white font-bold text-center">
+          تحتاج لمساعدة ؟
+        </h2>
+
+        <h2 class="text-xl md:text-3xl text-orange-500 font-bold text-center mt-3">
+          لا تتردد فى التواصل معنا
+        </h2>
+
+        <p id="error" class="text-red-500 text-center hidden mt-5 text-lg md:text-2xl">
+          برجاء ملئ جميع الحقول
+        </p>
+
+        <form class="mt-6 md:mt-5 flex flex-col gap-y-4 md:gap-y-5 message-form max-w-2xl mx-auto" action="POST">
+          <label for="name" class="text-white text-lg md:text-xl">الأسم</label>
+          <input class="bg-blue-950 py-3 md:py-2 border-white border px-3 md:px-2 text-white rounded-xl text-lg md:text-base" type="text" id="name" name="name" />
+          
+          <label for="phone" class="text-white text-lg md:text-xl">الجوال</label>
+          <input class="bg-blue-950 py-3 md:py-2 border-white border px-3 md:px-2 text-white rounded-xl text-lg md:text-base" dir="rtl" type="tel" id="phone" name="phone" />
+          
+          <label for="email" class="text-white text-lg md:text-xl">البريد الالكترونى</label>
+          <input class="bg-blue-950 py-3 md:py-2 border-white border px-3 md:px-2 text-white rounded-xl text-lg md:text-base" type="email" id="email" name="email" />
+          
+          <label for="message" class="text-white text-lg md:text-xl">الموضوع</label>
+          <textarea class="bg-blue-950 py-3 md:py-2 border-white border px-3 md:px-2 text-white rounded-xl text-lg md:text-base min-h-[120px] md:min-h-[100px]" id="message" name="message"></textarea>
+          
+          <button id="form-button" type="submit" class="text-white bg-orange-500 border px-6 md:px-5 py-3 md:py-2 mt-6 md:mt-5 w-full md:w-1/4 mx-auto hover:bg-white hover:text-black transition-all rounded-xl text-lg md:text-base font-semibold">
+            أرسل
+          </button>
+        </form>
+      </div>
+
+      <!-- Form end-->
+      <footer class="bg-black/80 backdrop-blur-sm border-t border-white/20 py-6 mt-20">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-center items-center">
+            <p class="text-white text-lg md:text-xl font-bold font-roboto">
+              STARTECH © 2025
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- holder End -->
+  </main>
+
+  <script src="js/index.js"></script>
+  <script src="js/all.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
+</body>
+
 </html>
